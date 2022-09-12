@@ -58,6 +58,7 @@ set(kdl_srcs
 )
 
 add_library(kdl ${kdl_srcs})
+set_property(TARGET kdl PROPERTY CXX_STANDARD 20)
 
 # Enable Eigen::internal::set_is_malloc_allowed checks for dynamic allocations (does not do anything in Release)
 target_compile_definitions(kdl PUBLIC EIGEN_RUNTIME_NO_MALLOC)
