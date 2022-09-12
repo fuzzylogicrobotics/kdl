@@ -22,13 +22,13 @@
 #ifndef KDL_CONFIG_H
 #define KDL_CONFIG_H
 
-#define KDL_VERSION_MAJOR 1
-#define KDL_VERSION_MINOR 6
+#define KDL_VERSION_MAJOR 2
+#define KDL_VERSION_MINOR 0
 #define KDL_VERSION_PATCH 0
 
 #define KDL_VERSION (KDL_VERSION_MAJOR << 16) | (KDL_VERSION_MINOR << 8) | KDL_VERSION_PATCH
 
-#define KDL_VERSION_STRING "1.6.0"
+#define KDL_VERSION_STRING "2.0.0"
 
 //Set which version of the Tree Interface to use
 /* #undef HAVE_STL_CONTAINER_INCOMPLETE_TYPES */
