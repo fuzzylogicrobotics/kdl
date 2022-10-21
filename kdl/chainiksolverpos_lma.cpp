@@ -228,7 +228,7 @@ int ChainIkSolverPos_LMA::CartToJnt(const KDL::JntArray& q_init, const KDL::Fram
 
 		svd.compute(jac);
 		original_Aii = svd.singularValues();
-		for (std::size_t j=0;j<original_Aii.rows();++j) {
+		for (std::size_t j=0;j<static_cast<std::size_t>(original_Aii.rows());++j) {
 			original_Aii(j) = original_Aii(j)/( original_Aii(j)*original_Aii(j)+lambda);
 
 		}

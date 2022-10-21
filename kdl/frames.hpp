@@ -167,12 +167,6 @@ public:
      //! Constructs a vector out of the three values x, y and z
      inline Vector(double x,double y, double z);
 
-     //! Assignment operator. The normal copy by value semantics.
-     inline Vector(const Vector& arg);
-
-     //! Assignment operator. The normal copy by value semantics.
-     inline Vector& operator = ( const Vector& arg);
-
      //! Access to elements, range checked when NDEBUG is not set, from 0..2
      inline double operator()(std::size_t index) const;
 

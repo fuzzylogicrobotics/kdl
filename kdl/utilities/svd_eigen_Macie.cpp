@@ -36,8 +36,8 @@ namespace KDL{
                 rotate=false;
                 rotations=0;
                 //Perform rotations between columns of B
-                for(std::size_t i=0;i<B.cols();i++){
-                    for(std::size_t j=i+1;j<B.cols();j++){
+                for(std::size_t i=0;i<static_cast<std::size_t>(B.cols());i++){
+                    for(std::size_t j=i+1;j<static_cast<std::size_t>(B.cols());j++){
                         //calculate plane rotation
                         double p = B.col(i).dot(B.col(j));
                         double qi =B.col(i).dot(B.col(i));
@@ -77,8 +77,8 @@ namespace KDL{
                 }
                 //Only calculate new U and S if there were any rotations
                 if(rotations!=0){
-                    for(std::size_t i=0;i<U.rows();i++) {
-                        if(i<B.cols()){
+                    for(std::size_t i=0;i<static_cast<std::size_t>(U.rows());i++) {
+                        if(i<static_cast<std::size_t>(B.cols())){
                             double si=sqrt(B.col(i).dot(B.col(i)));
                             if(si==0)
                                 U.col(i) = B.col(i);
@@ -100,8 +100,8 @@ namespace KDL{
                 rotate=false;
                 rotations=0;
                 //Perform rotations between rows of B
-                for(std::size_t i=0;i<B.cols();i++){
-                    for(std::size_t j=i+1;j<B.cols();j++){
+                for(std::size_t i=0;i<static_cast<std::size_t>(B.cols());i++){
+                    for(std::size_t j=i+1;j<static_cast<std::size_t>(B.cols());j++){
                         //calculate plane rotation
                         double p = B.row(i).dot(B.row(j));
                         double qi = B.row(i).dot(B.row(i));
@@ -145,7 +145,7 @@ namespace KDL{
 
                 //Only calculate new U and S if there were any rotations
                 if(rotations!=0){
-                    for(std::size_t i=0;i<V.rows();i++) {
+                    for(std::size_t i=0;i<static_cast<std::size_t>(V.cols());i++) {
                         double si=sqrt(B.row(i).dot(B.row(i)));
                         if(si==0)
                             V.col(i) = B.row(i);

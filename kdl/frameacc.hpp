@@ -70,7 +70,6 @@ public:
     VectorAcc(const Vector& _p,const Vector& _v):p(_p),v(_v),dv(Vector::Zero()) {}
     VectorAcc(const Vector& _p,const Vector& _v,const Vector& _dv):
         p(_p),v(_v),dv(_dv) {}
-    IMETHOD VectorAcc& operator = (const VectorAcc& arg);
     IMETHOD VectorAcc& operator = (const Vector& arg);
     IMETHOD VectorAcc& operator += (const VectorAcc& arg);
     IMETHOD VectorAcc& operator -= (const VectorAcc& arg);
@@ -118,7 +117,6 @@ public:
     explicit RotationAcc(const Rotation& _R):R(_R),w(Vector::Zero()){}
     RotationAcc(const Rotation& _R,const Vector& _w,const Vector& _dw):
         R(_R),w(_w),dw(_dw) {}
-    IMETHOD RotationAcc& operator = (const RotationAcc& arg);
     IMETHOD RotationAcc& operator = (const Rotation& arg);
     IMETHOD static RotationAcc Identity();
     IMETHOD RotationAcc Inverse() const;

@@ -28,7 +28,6 @@ namespace KDL {
 
     ChainDynParam::ChainDynParam(const Chain& _chain, Vector _grav):
             chain(_chain),
-            nr(0),
             nj(chain.getNrOfJoints()),
             ns(chain.getNrOfSegments()),
             grav(_grav),

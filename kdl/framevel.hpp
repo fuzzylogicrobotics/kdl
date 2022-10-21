@@ -98,7 +98,6 @@ public:
     Vector value() const { return p;}
     Vector deriv() const { return v;}
 
-    IMETHOD VectorVel& operator = (const VectorVel& arg);
     IMETHOD VectorVel& operator = (const Vector& arg);
     IMETHOD VectorVel& operator += (const VectorVel& arg);
     IMETHOD VectorVel& operator -= (const VectorVel& arg);
@@ -158,12 +157,9 @@ public:
     explicit RotationVel(const Rotation& _R):R(_R),w(Vector::Zero()){}
     RotationVel(const Rotation& _R,const Vector& _w):R(_R),w(_w){}
 
-
     Rotation value() const { return R;}
     Vector   deriv() const { return w;}
 
-
-    IMETHOD RotationVel& operator = (const RotationVel& arg);
     IMETHOD RotationVel& operator = (const Rotation& arg);
 	IMETHOD VectorVel UnitX() const;
 	IMETHOD VectorVel UnitY() const;
@@ -231,7 +227,6 @@ public:
 
     FrameVel(const RotationVel& _M,const VectorVel& _p):
         M(_M),p(_p) {}
-
 
     Frame value() const { return Frame(M.value(),p.value());}
     Twist deriv() const { return Twist(p.deriv(),M.deriv());}

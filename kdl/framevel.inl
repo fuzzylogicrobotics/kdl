@@ -138,11 +138,6 @@ RotationVel operator* (const RotationVel& r1,const Rotation& r2) {
     return RotationVel( r1.R*r2, r1.w );
 }
 
-RotationVel& RotationVel::operator = (const RotationVel& arg) {
-        R=arg.R;
-        w=arg.w;
-        return *this;
-    }
 RotationVel& RotationVel::operator = (const Rotation& arg) {
     R=arg;
     w=Vector::Zero();
@@ -322,11 +317,6 @@ VectorVel operator*(const Rotation& R,const VectorVel& x) {
     return VectorVel(R*x.p,R*x.v);
 }
 
-VectorVel& VectorVel::operator = (const VectorVel& arg) {
-    p=arg.p;
-    v=arg.v;
-    return *this;
-}
 VectorVel& VectorVel::operator = (const Vector& arg) {
     p=arg;
     v=Vector::Zero();

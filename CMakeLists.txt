@@ -60,6 +60,16 @@ set(kdl_srcs
 add_library(kdl ${kdl_srcs})
 set_property(TARGET kdl PROPERTY CXX_STANDARD 20)
 
+if(MSVC)
+  # /W4 warning level
+  # /WX warning as error
+  target_compile_options(kdl PRIVATE /W4 /WX)
+else()
+  # -Werror warning as error
+  # -Wall -Wextra Warning level
+  target_compile_options(kdl PRIVATE -Wall -Wextra -Werror)
+endif()
+
 # Enable Eigen::internal::set_is_malloc_allowed checks for dynamic allocations (does not do anything in Release)
 target_compile_definitions(kdl PUBLIC EIGEN_RUNTIME_NO_MALLOC)
 

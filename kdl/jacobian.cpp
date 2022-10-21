@@ -84,7 +84,7 @@ namespace KDL
     }
 
     void Jacobian::changeRefPoint(const Vector& base_AB){
-        for(std::size_t i=0;i<data.cols();i++)
+        for(std::size_t i=0;i<static_cast<std::size_t>(data.cols());i++)
             this->setColumn(i,this->getColumn(i).RefPoint(base_AB));
     }
 
@@ -98,7 +98,7 @@ namespace KDL
     }
 
     void Jacobian::changeBase(const Rotation& rot){
-        for(std::size_t i=0;i<data.cols();i++)
+        for(std::size_t i=0;i<static_cast<std::size_t>(data.cols());i++)
             this->setColumn(i,rot*this->getColumn(i));;
     }
 
@@ -112,7 +112,7 @@ namespace KDL
     }
 
     void Jacobian::changeRefFrame(const Frame& frame){
-        for(std::size_t i=0;i<data.cols();i++)
+        for(std::size_t i=0;i<static_cast<std::size_t>(data.cols());i++)
             this->setColumn(i,frame*this->getColumn(i));
     }
 

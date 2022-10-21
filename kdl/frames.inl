@@ -31,27 +31,9 @@
  *
  */
 
-
-
-IMETHOD Vector::Vector(const Vector & arg)
-{
-    data[0] = arg.data[0];
-    data[1] = arg.data[1];
-    data[2] = arg.data[2];
-}
-
 IMETHOD Vector::Vector(double x,double y, double z)
 {
         data[0]=x;data[1]=y;data[2]=z;
-}
-
-
-IMETHOD Vector& Vector::operator =(const Vector & arg)
-{
-    data[0] = arg.data[0];
-    data[1] = arg.data[1];
-    data[2] = arg.data[2];
-    return *this;
 }
 
 IMETHOD Vector operator +(const Vector & lhs,const Vector& rhs)
