@@ -122,18 +122,18 @@ public:
 		\return if \a error is known then a description of \a error, otherwise
 		"UNKNOWN ERROR"
 	*/
-	virtual const char* strError(const int error) const
+	virtual const char* strError(const int err) const
 	{
-		if (E_NOERROR == error) return "No error";
-		else if (E_NO_CONVERGE == error) return "Failed to converge";
-		else if (E_UNDEFINED == error) return "Undefined value";
-		else if (E_DEGRADED == error) return "Converged but degraded solution";
-		else if (E_NOT_UP_TO_DATE == error) return "Internal data structures not up to date with Chain";
-		else if (E_SIZE_MISMATCH == error) return "The size of the input does not match the internal state";
-		else if (E_MAX_ITERATIONS_EXCEEDED == error) return "The maximum number of iterations is exceeded";
-		else if (E_OUT_OF_RANGE == error) return "The requested index is out of range";
-		else if (E_NOT_IMPLEMENTED == error) return "The requested function is not yet implemented";
-		else  if (E_SVD_FAILED == error) return "SVD failed";
+		if (E_NOERROR == err) return "No error";
+		else if (E_NO_CONVERGE == err) return "Failed to converge";
+		else if (E_UNDEFINED == err) return "Undefined value";
+		else if (E_DEGRADED == err) return "Converged but degraded solution";
+		else if (E_NOT_UP_TO_DATE == err) return "Internal data structures not up to date with Chain";
+		else if (E_SIZE_MISMATCH == err) return "The size of the input does not match the internal state";
+		else if (E_MAX_ITERATIONS_EXCEEDED == err) return "The maximum number of iterations is exceeded";
+		else if (E_OUT_OF_RANGE == err) return "The requested index is out of range";
+		else if (E_NOT_IMPLEMENTED == err) return "The requested function is not yet implemented";
+		else  if (E_SVD_FAILED == err) return "SVD failed";
 		else return "UNKNOWN ERROR";
 	}
 
