@@ -216,7 +216,7 @@ namespace KDL
         virtual void updateInternalDataStructures();
 
     private:
-        const Chain& chain;
+        const Chain chain;
         ChainJntToJacSolver jnt2jac;
         std::size_t nj;
         Jacobian jac;

@@ -165,7 +165,7 @@ protected:
                                const int& representation);
 private:
 
-    const Chain& chain;
+    const Chain chain;
     std::vector<bool> locked_joints_;
     std::size_t nr_of_unlocked_joints_;
     ChainJntToJacSolver jac_solver_;

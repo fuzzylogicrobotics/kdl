@@ -58,7 +58,7 @@ namespace KDL {
     virtual void updateInternalDataStructures();
 
     private:
-        const Chain& chain;
+        const Chain chain;
 	int nr;  // unused, remove in a future version
 	std::size_t nj;
         std::size_t ns;	

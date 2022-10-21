@@ -157,7 +157,7 @@ public:
     virtual const char* strError(const int error) const;
 
 private:
-    const KDL::Chain& chain;
+    const Chain chain;
     std::size_t nj;
     std::size_t ns;
 

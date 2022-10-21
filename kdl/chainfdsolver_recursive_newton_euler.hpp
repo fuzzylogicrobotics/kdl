@@ -92,7 +92,7 @@ namespace KDL{
                            KDL::JntArray& q_temp, KDL::JntArray& q_dot_temp);
 
     private:
-        const Chain& chain;
+        const Chain chain;
         ChainDynParam DynSolver;
         ChainIdSolver_RNE IdSolver;
         std::size_t nj;
